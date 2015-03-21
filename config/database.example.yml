@@ -1,0 +1,21 @@
+# make sure you have Postgres.app installed and running
+# http://postgresapp.com/
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  host: localhost
+  username: [[[[[[[[[[  YOUR COMPUTER USERNAME HERE  ]]]]]]]]]]
+  password:
+
+development:
+  <<: *default
+  database: fcflamingo_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: fcflamingo_test
