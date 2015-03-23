@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -43,6 +43,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'haml-rails'
+gem 'font-awesome-sass'
 
 gem 'rails_12factor', group: :production
 

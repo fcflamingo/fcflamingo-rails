@@ -1,0 +1,21 @@
+.row
+  .col-xs-12.bg-white
+    .col-xs-6.col-sm-6.col-md-6.col-lg-6
+      %h4 Play
+    .col-xs-6.col-sm-6.col-md-6.col-lg-6
+      = link_to new_play_path(@play), class: 'btn btn-success pull-right' do
+        .glyphicon.glyphicon-plus
+        Add a post
+        .glyphicon.glyphicon-plus
+.row
+  .col-xs-12.col-sm-12.col-md-12.col-lg-12.bg-white{style: 'padding-top: 16px;'}
+    - @plays.reverse_each do |play|
+      %ul.col-xs-12.col-sm-12.col-md-6.col-lg-4.play-time
+        %li
+          = link_to play_path(play), class: 'col-xs-12 play-title' do
+            %h2
+              = play.title
+          - unless play.banner.empty?
+            = image_tag "#{play.banner}"
+          - else
+            %iframe{:src => "#{play.image_1}",  height: "250px;", width: "100%"}

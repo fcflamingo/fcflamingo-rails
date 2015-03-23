@@ -1,0 +1,81 @@
+.row{style: 'padding-top: 16px;'}
+  %ul.col-xs-12.col-sm-12.col-md-3.col-lg-3
+    .col-xs-12.col-sm-12.col-md-3.col-lg-3.fixed-side-nav
+      %li
+        %h1
+          = link_to play_path(@play) do
+            = @play.title
+      %li
+        %asside
+          = @play.body
+      %li.btn-group.btn-group-justified
+        = link_to play_path(@play), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-default' do
+          %span.glyphicon.glyphicon-remove-sign
+        = link_to edit_play_path(@play), title: 'edit', class: 'btn btn-default' do
+          %span.glyphicon.glyphicon-wrench
+  %ul.col-xs-12.col-sm-12.col-md-9.col-lg-9
+    %li
+    - unless @play.image_1.blank?
+      %li.article
+        = image_tag "#{@play.image_1}"
+    - unless @play.image_2.blank?
+      %li.article
+        = image_tag "#{@play.image_2}"
+    - unless @play.image_3.blank?
+      %li.article
+        = image_tag "#{@play.image_3}"
+    - unless @play.image_4.blank?
+      %li.article
+        = image_tag "#{@play.image_4}"
+    - unless @play.image_5.blank?
+      %li.article
+        = image_tag "#{@play.image_5}"
+    - unless @play.image_6.blank?
+      %li.article
+        = image_tag "#{@play.image_6}"
+    - unless @play.image_7.blank?
+      %li.article
+        = image_tag "#{@play.image_7}"
+    - unless @play.image_8.blank?
+      %li.article
+        = image_tag "#{@play.image_8}"
+    - unless @play.image_9.blank?
+      %li.article
+        = image_tag "#{@play.image_9}"
+    - unless @play.image_10.blank?
+      %li.article
+        = image_tag "#{@play.image_10}"
+
+
+    - unless @play.video_1.blank?
+      %li.article
+        %iframe{src: "#{@play.video_1}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_2.blank?
+      %li.article
+        %iframe{src: "#{@play.video_2}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_3.blank?
+      %li.article
+        %iframe{src: "#{@play.video_3}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_4.blank?
+      %li.article
+        %iframe{src: "#{@play.video_4}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_5.blank?
+      %li.article
+        %iframe{src: "#{@play.video_5}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_6.blank?
+      %li.article
+        %iframe{src: "#{@play.video_6}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_7.blank?
+      %li.article
+        %iframe{src: "#{@play.video_7}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_8.blank?
+      %li.article
+        %iframe{src: "#{@play.video_8}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_9.blank?
+      %li.article
+        %iframe{src: "#{@play.video_9}", "min-width" => "100%", :height => "400px", :width => "100%"}
+    - unless @play.video_10.blank?
+      %li.article
+        %iframe{src: "#{@play.video_10}", "min-width" => "100%", :height => "400px", :width => "100%"}
+
+= render 'index'

@@ -1,0 +1,68 @@
+// Place all the styles related to the blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.play-time, .work-time {
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -ms-transition: .25s ease;
+  -o-transition: .25s ease;
+  transition: .25s ease;
+  max-height: 400px;
+  .play-title, .work-title {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    padding: 0 1em 0;
+    h2 {
+      position: relative;
+      top: 35%;
+      text-align: center;
+      color: #fff;
+    }
+  }
+  img {
+  }
+  overflow: hidden;
+}
+
+.play-title:hover, .work-title:hover {
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  background: rgba(251,131,250,0.95); /* Old browsers */
+  background: -moz-linear-gradient(bottom,  rgba(24, 66, 184,0.95) 0%, rgba(255, 0, 170,0.95) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, bottom top, right right, color-stop(0%,rgba(24, 66, 184,0.95)), color-stop(100%, rgba(255, 0, 170,0.95))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(bottom,  rgba(24, 66, 184,0.95) 0%, rgba(255, 0, 170,0.95) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(bottom,  rgba(24, 66, 184,0.95) 0%, rgba(255, 0, 170,0.95) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(bottom,  rgba(24, 66, 184,0.95) 0%, rgba(255, 0, 170,0.95) 100%); /* IE10+ */
+  background: linear-gradient(to top,  rgba(24, 66, 184,0.95) 0%, rgba(255, 0, 170,0.95) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb83fa', endColorstr='#e93cec',GradientType=1 ); /* IE6-9 */
+}
+
+.fixed-side-nav {
+  position: fixed;
+  top: 18em;
+  left: 0em;
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.article {
+  border: 1em solid #fff;
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+  .play-time, .work-time {
+    max-height: 100%;
+  }
+}
