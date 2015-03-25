@@ -1,0 +1,57 @@
+.container-fluid
+  %div{:style => 'padding: 1; width: 330px;'}
+    .well.pull-right{style: 'width: 100%;'}
+      %h4 User
+      - @user.name
+
+      = form_for @user do |f|
+        - if @user.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@user.errors.count, "error")} Cannot be saved:"
+            %ul
+              - @user.errors.full_messages.each do |msg|
+                %li= msg
+        .form-group
+          = f.label :name
+          = f.text_field :name, class: 'form-control', :placeholder => 'Full Name'
+        .form-group
+          = f.label :email
+          = f.text_field :email, class: 'form-control', :placeholder => 'Valid Email'
+        .form-group
+          .panel
+            #headingTwo.panel-heading{:role => "tab"}
+              %h4.panel-title
+                %a{"aria-controls" => "collapseTwo", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                  Does this user have rights?
+            #collapseTwo.panel-collapse.collapse.out{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+              .panel-body
+                .form-group
+                  .input-group
+                    .form-control
+                      = f.label :admin
+                    .input-group-addon
+                      = f.check_box :admin, :placeholder => 'Admin', type: "radio"
+                .form-group
+                  .input-group
+                    .form-control
+                      = f.label :author
+                    .input-group-addon
+                      = f.check_box :author, :placeholder => 'Author', type: "radio"
+                .form-group
+                  .input-group
+                    .form-control
+                      = f.label :no_rights
+                    .input-group-addon
+                      = f.check_box :no_rights, :placeholder => 'Client', type: "radio"
+        .form-group
+          = f.label :password
+          = f.password_field :password, class: 'form-control', :placeholder => 'Password: minimum of 6 characters'
+        .form-group
+          = f.label :password_confirmation, 'Confirmation'
+          = f.password_field :password_confirmation, class: 'form-control', :placeholder => 'Password: minimum of 6 characters'
+        .form-group
+          = link_to users_path, class: 'btn btn-default pull-left', style: 'padding-top: 7px;' do
+            Back
+          = f.submit 'Save', class: 'btn btn-primary  pull-right'
+
+

@@ -1,0 +1,17 @@
+.container-fluid
+  %div{:style => 'padding: 1; width: 330px; '}
+    .well.pull-right{style: 'width: 100%;'}
+      .row
+        .col-md-12
+          = form_for(:session, url: login_path) do |f|
+            .form-group
+              = f.label :email
+              = f.email_field :email, class: 'form-control'
+            .form-group
+              = f.label :password
+              = f.password_field :password, class: 'form-control'
+            .form-group
+              = f.submit "Log in", class: "btn btn-primary btn-block"
+            = f.label :remember_me, class: "checkbox inline" do
+              = f.check_box :remember_me
+              %span Remember me on this computer

@@ -21,11 +21,14 @@
 @import "play";
 @import "home";
 @import "navbar";
+@import "contact";
+@import "debug";
 
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100 !important;
+  padding: 1em;
+  text-transform: uppercase;
 }
 
 img {
@@ -38,9 +41,41 @@ ul {
     list-style: none;
   }
 }
-
+.btn {
+  border-radius: 0;
+}
 a {
   color: #111;
+}
+
+img.gravatar {
+  width: 40px !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.alert.alert-alert {
+  background: #f2dede;
+  color: $state-danger-text;
+}
+
+.alert.alert-notice {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }
 
 a:hover, .fa:hover, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-brand:hover {
@@ -49,8 +84,29 @@ a:hover, .fa:hover, .navbar-default .navbar-nav li a:hover, .navbar-default .nav
   text-decoration: underline;
 }
 
-@media (min-width: 0px) and (max-width: 920px) {
+.buffer-vertical {
+  padding-top: 11em;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
   body {
     padding: 0;
+  }
+  .buffer-vertical {
+    padding-top: 5em;
   }
 }
