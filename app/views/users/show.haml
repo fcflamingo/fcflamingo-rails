@@ -5,10 +5,11 @@
         %li
           %h1
             = gravatar_for @user
+            Welcome,
             = link_to user_path(@user) do
               = @user.name
-        %li
-          %asside
+              \!!!
+          %h3
             = @user.email
         %li
           Admin:

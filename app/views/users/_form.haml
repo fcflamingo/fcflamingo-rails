@@ -1,5 +1,5 @@
 .container-fluid
-  %div{:style => 'padding: 1; width: 330px; margin: 0 auto;'}
+  %div{:style => 'padding: 1; width: 330px;'}
     .well.pull-right{style: 'width: 100%;'}
       %h4 User
       - @user.name
@@ -14,6 +14,9 @@
         .form-group
           = f.label :name
           = f.text_field :name, class: 'form-control', :placeholder => 'Full Name'
+        .form-group
+          = f.label :email
+          = f.text_field :email, class: 'form-control', :placeholder => 'Valid Email'
         .form-group
           .panel
             #headingTwo.panel-heading{:role => "tab"}
@@ -40,9 +43,6 @@
                       = f.label :client
                     .input-group-addon
                       = f.check_box :client, :placeholder => 'Client', type: "radio"
-        .form-group
-          = f.label :email
-          = f.text_field :email, class: 'form-control', :placeholder => 'Valid Email'
         .form-group
           = f.label :password
           = f.password_field :password, class: 'form-control', :placeholder => 'Password: minimum of 6 characters'

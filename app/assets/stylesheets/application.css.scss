@@ -83,6 +83,20 @@ a:hover, .fa:hover, .navbar-default .navbar-nav li a:hover, .navbar-default .nav
   padding-top: 11em;
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 @media (min-width: 0px) and (max-width: 991px) {
   body {
     padding: 0;

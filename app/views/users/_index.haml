@@ -2,10 +2,11 @@
   .row
     .col-xs-12
       .col-xs-6.col-sm-6.col-md-6.col-lg-6
-        %h4 List of all Users
-      .col-xs-6.col-sm-6.col-md-6.col-lg-6
-        = link_to new_user_path(@user), class: 'btn btn-success pull-right' do
-          Add a user
+        %h4
+          %span
+            = link_to new_user_path(@user), class: 'btn btn-success btn-sm', style: 'margin-top: -6px;' do
+              .glyphicon.glyphicon-plus
+          List of all Users
 .well
   .row
     .col-xs-12.col-sm-12.col-md-12.col-lg-12{style: 'padding-top: 16px;'}
