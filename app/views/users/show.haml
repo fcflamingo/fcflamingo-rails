@@ -5,26 +5,25 @@
         %li
           %h1
             = gravatar_for @user
-            Welcome,
             = link_to user_path(@user) do
               = @user.name
-              \!!!
           %h3
             = @user.email
-        %li
-          Admin:
-          = @user.admin
-        %li
-          Author:
-          = @user.author
-        %li
-          Client:
-          = @user.client
+        - if @user.admin == true
+          %li
+            Admin
+        - if @user.author == true
+          %li
+            Author
+        - if @user.no_rights == true
+          %li
+            No rights
         %br
-        %li.btn-group
-          = link_to edit_user_path(@user), title: 'edit', class: 'btn btn-primary' do
-            %span.glyphicon.glyphicon-wrench
-          = link_to user_path(@user), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' do
-            %span.glyphicon.glyphicon-remove-sign
+        - if can? :manage, @user
+          %li.btn-group
+            = link_to edit_user_path(@user), title: 'edit', class: 'btn btn-primary' do
+              %span.glyphicon.glyphicon-wrench
+            = link_to user_path(@user), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' do
+              %span.glyphicon.glyphicon-remove-sign
 
 = render 'index'

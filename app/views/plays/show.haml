@@ -9,11 +9,12 @@
         %asside
           = @play.body
       %br
-      %li.btn-group
-        = link_to edit_play_path(@play), title: 'edit', class: 'btn btn-primary' do
-          %span.glyphicon.glyphicon-wrench
-        = link_to play_path(@play), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' do
-          %span.glyphicon.glyphicon-remove-sign
+      - if can? :manage, @play
+        %li.btn-group
+          = link_to edit_play_path(@play), title: 'edit', class: 'btn btn-primary' do
+            %span.glyphicon.glyphicon-wrench
+          = link_to play_path(@play), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' do
+            %span.glyphicon.glyphicon-remove-sign
   %ul.col-xs-12.col-sm-12.col-md-8.col-lg-8
     %li
     - unless @play.image_1.blank?
@@ -77,11 +78,10 @@
       %li.article
         %iframe{src: "#{@play.video_10}", "min-width" => "100%", :height => "400px", :width => "100%"}
 
-  .col-xs-12.col-sm-12.col-md-1.col-lg-1
-    .col-xs-12.col-sm-12.col-md-1.col-lg-1.fixed-change-post-btn
-      .btn.btn-default.btn-dark
-        .fa.fa-angle-left
-        .glyphicon.glyphicon-menu-left
-      .btn.btn-default.btn-dark
+  .col-xs-12
+    .col-xs-12.fixed-change-post-btn
+      .btn.btn-default.btn-dark.pull-right
         .fa.fa-angle-right
+      .btn.btn-default.btn-dark.pull-right
+        .fa.fa-angle-left
 = render 'index'

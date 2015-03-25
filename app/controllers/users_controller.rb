@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @users = User.all
   end
@@ -51,7 +53,7 @@ class UsersController < ApplicationController
         :name,
         :admin,
         :author,
-        :client,
+        :no_rights,
         :email,
         :password,
         :password_confirmation

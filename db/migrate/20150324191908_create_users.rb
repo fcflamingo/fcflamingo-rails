@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.boolean :admin
       t.boolean :author
-      t.boolean :client
+      t.boolean :no_rights
 
       t.timestamps
     end

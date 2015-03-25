@@ -44,7 +44,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'haml-rails'
 gem 'font-awesome-sass'
-# gem 'cancan'
+gem 'cancancan', '~> 1.10'
 gem 'rails_12factor', group: :production
 
 group :development, :test do

@@ -1,22 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-User.create(name: 'guest User', admin: true, author: false, client: false, email: 'guest@fcflamingo.com', password: 'guesuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'hello3@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: '4@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'hello4@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'hell5o@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'he6llo@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'he6llo@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'hel7lo@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'hel8lo@fcflamingo.com', password: 'testuser')
-User.create(name: 'Test User', admin: true, author: false, client: false, email: 'he9llo@fcflamingo.com', password: 'testuser')
-
 Play.create(title: 'The Ecstatic',
             body: '+~Made by FC Flamingo~+ www.theecstatic.com',
             banner: 'http://static1.squarespace.com/static/547e761ee4b06bdd71a72c1a/547f9668e4b04d331210b891/547f9688e4b046b3148e84b6/1417647752941/tumblr_n586u90KHk1tb9wu7o1_r1_1280.jpg?format=1000w',

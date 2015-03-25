@@ -1,4 +1,6 @@
 class PlaysController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @plays = Play.all
   end

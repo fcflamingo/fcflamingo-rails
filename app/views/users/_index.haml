@@ -1,19 +1,19 @@
-.panel.panel-header
-  .row
-    .col-xs-12
-      .col-xs-6.col-sm-6.col-md-6.col-lg-6
+- if can? :manage, @user
+  .panel.panel-header
+    .row
+      .col-xs-12
         %h4
           %span
             = link_to new_user_path(@user), class: 'btn btn-success btn-sm', style: 'margin-top: -6px;' do
               .glyphicon.glyphicon-plus
           List of all Users
-.well
-  .row
-    .col-xs-12.col-sm-12.col-md-12.col-lg-12{style: 'padding-top: 16px;'}
-      - @users.reverse_each do |user|
-        %ul.col-xs-12.col-sm-6.col-md-4.col-lg-2.user-time
-          %li
-            = link_to user_path(user), class: 'col-xs-12 user-title' do
-              %h6
-                = gravatar_for user
-                = user.name
+  .well
+    .row
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12{style: 'padding-top: 16px;'}
+        - @users.reverse_each do |user|
+          %ul.col-xs-12.col-sm-6.col-md-4.col-lg-2.user-time
+            %li
+              = link_to user_path(user), class: 'col-xs-12 user-title' do
+                %h6
+                  = gravatar_for user
+                  = user.name

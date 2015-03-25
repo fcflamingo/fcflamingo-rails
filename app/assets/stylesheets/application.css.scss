@@ -67,6 +67,11 @@ img.gravatar {
   }
 }
 
+.alert.alert-alert {
+  background: #f2dede;
+  color: $state-danger-text;
+}
+
 .alert.alert-notice {
   color: #3c763d;
   background-color: #dff0d8;

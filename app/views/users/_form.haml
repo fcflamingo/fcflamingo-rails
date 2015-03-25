@@ -40,9 +40,9 @@
                 .form-group
                   .input-group
                     .form-control
-                      = f.label :client
+                      = f.label :no_rights
                     .input-group-addon
-                      = f.check_box :client, :placeholder => 'Client', type: "radio"
+                      = f.check_box :no_rights, :placeholder => 'Client', type: "radio"
         .form-group
           = f.label :password
           = f.password_field :password, class: 'form-control', :placeholder => 'Password: minimum of 6 characters'
