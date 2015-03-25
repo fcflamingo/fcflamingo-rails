@@ -1,59 +1,60 @@
-.container-fluid{style: 'margin: 16px 0;'}
-  %div{:style => 'padding: 1; max-width: 330px; margin: 0 auto;'}
-    %h4 Write your new post here
-    = form_for @play do |f|
-      - if @play.errors.any?
-        #error_explanation
-          %h2= "#{pluralize(@play.errors.count, "error")} Cannot be saved:"
-          %ul
-            - @play.errors.full_messages.each do |msg|
-              %li= msg
-      .form-group
-        = f.text_field :title, class: 'form-control', :placeholder => 'Title goes here...'
-      .form-group
-        = f.text_area :body, class: 'form-control', :placeholder => 'Write some stuff here...'
-      .form-group
-        = f.text_field :banner, class: 'form-control', :placeholder => 'Banner Image URL'
-      .form-group
-        #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
-          .panel.panel-default
-            #headingOne.panel-heading{:role => "tab"}
-              %h4.panel-title
-                %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
-                  Add a video
-            #collapseOne.panel-collapse.collapse.out{"aria-labelledby" => "headingOne", :role => "tabpanel"}
-              .panel-body
-                = f.text_field :video_1, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_2, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_3, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_4, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_5, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_6, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_7, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_8, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_9, class: 'form-control', :placeholder => 'Add Video URL'
-                = f.text_field :video_10, class: 'form-control', :placeholder => 'Add Video URL'
+.container-fluid
+  %div{:style => 'padding: 1; width: 330px; margin: 0 auto;'}
+    .well.pull-right{style: 'width: 100%;'}
+      %h4 Write your new post here
+      = form_for @play do |f|
+        - if @play.errors.any?
+          #error_explanation
+            %h2= "#{pluralize(@play.errors.count, "error")} Cannot be saved:"
+            %ul
+              - @play.errors.full_messages.each do |msg|
+                %li= msg
         .form-group
-          .panel.panel-default
-            #headingTwo.panel-heading{:role => "tab"}
-              %h4.panel-title
-                %a{"aria-controls" => "collapseTwo", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
-                  Add a video
-            #collapseTwo.panel-collapse.collapse.out{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
-              .panel-body
-                = f.text_field :image_1, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_2, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_3, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_4, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_5, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_6, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_7, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_8, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_9, class: 'form-control', :placeholder => 'Add Image URL'
-                = f.text_field :image_10, class: 'form-control', :placeholder => 'Add Video URL'
-      .form-group
-        = link_to plays_path, class: 'btn btn-primary pull-left', style: 'padding-top: 7px;' do
-          .glyphicon.glyphicon-remove
-        = f.submit class: 'btn btn-default pull-right'
+          = f.text_field :title, class: 'form-control', :placeholder => 'Title goes here...'
+        .form-group
+          = f.text_area :body, class: 'form-control', :placeholder => 'Write some stuff here...'
+        .form-group
+          = f.text_field :banner, class: 'form-control', :placeholder => 'Banner Image URL'
+        .form-group
+          #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+            .panel.panel-default
+              #headingOne.panel-heading{:role => "tab"}
+                %h4.panel-title
+                  %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                    Add some videos
+              #collapseOne.panel-collapse.collapse.out{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+                .panel-body
+                  = f.text_field :video_1, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_2, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_3, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_4, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_5, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_6, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_7, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_8, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_9, class: 'form-control', :placeholder => 'Add Video URL'
+                  = f.text_field :video_10, class: 'form-control', :placeholder => 'Add Video URL'
+          .form-group
+            .panel.panel-default
+              #headingTwo.panel-heading{:role => "tab"}
+                %h4.panel-title
+                  %a{"aria-controls" => "collapseTwo", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                    Add some images
+              #collapseTwo.panel-collapse.collapse.out{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+                .panel-body
+                  = f.text_field :image_1, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_2, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_3, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_4, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_5, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_6, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_7, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_8, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_9, class: 'form-control', :placeholder => 'Add Image URL'
+                  = f.text_field :image_10, class: 'form-control', :placeholder => 'Add Video URL'
+        .form-group
+          = link_to plays_path, class: 'btn btn-default pull-left', style: 'padding-top: 7px;' do
+            Back
+          = f.submit 'Save', class: 'btn btn-primary  pull-right'
 
 

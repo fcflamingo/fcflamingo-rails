@@ -4,9 +4,7 @@
       %h4 Play
     .col-xs-6.col-sm-6.col-md-6.col-lg-6
       = link_to new_play_path(@play), class: 'btn btn-success pull-right' do
-        .glyphicon.glyphicon-plus
         Add a post
-        .glyphicon.glyphicon-plus
 .row
   .col-xs-12.col-sm-12.col-md-12.col-lg-12.bg-white{style: 'padding-top: 16px;'}
     - @plays.reverse_each do |play|

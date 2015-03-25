@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get 'home', to: 'home'
   get 'work', to: 'work'
   resources :plays
-  resources :clients
+  get 'signup'  => 'users#new'
+  resources :users
   get 'contact', to: 'contact'
 
   root 'home#home'

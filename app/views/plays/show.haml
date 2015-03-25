@@ -1,6 +1,6 @@
 .row{style: 'padding-top: 16px;'}
-  %ul.col-xs-12.col-sm-12.col-md-3.col-lg-3
-    .col-xs-12.col-sm-12.col-md-3.col-lg-3.fixed-side-nav
+  .col-xs-12.col-sm-12.col-md-3.col-lg-3
+    %ul.col-xs-12.col-sm-12.col-md-3.col-lg-3.fixed-side-nav
       %li
         %h1
           = link_to play_path(@play) do
@@ -8,12 +8,13 @@
       %li
         %asside
           = @play.body
-      %li.btn-group.btn-group-justified
-        = link_to play_path(@play), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-default' do
-          %span.glyphicon.glyphicon-remove-sign
-        = link_to edit_play_path(@play), title: 'edit', class: 'btn btn-default' do
+      %br
+      %li.btn-group
+        = link_to edit_play_path(@play), title: 'edit', class: 'btn btn-primary' do
           %span.glyphicon.glyphicon-wrench
-  %ul.col-xs-12.col-sm-12.col-md-9.col-lg-9
+        = link_to play_path(@play), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' do
+          %span.glyphicon.glyphicon-remove-sign
+  %ul.col-xs-12.col-sm-12.col-md-8.col-lg-8
     %li
     - unless @play.image_1.blank?
       %li.article
@@ -45,8 +46,6 @@
     - unless @play.image_10.blank?
       %li.article
         = image_tag "#{@play.image_10}"
-
-
     - unless @play.video_1.blank?
       %li.article
         %iframe{src: "#{@play.video_1}", "min-width" => "100%", :height => "400px", :width => "100%"}
@@ -78,4 +77,11 @@
       %li.article
         %iframe{src: "#{@play.video_10}", "min-width" => "100%", :height => "400px", :width => "100%"}
 
+  .col-xs-12.col-sm-12.col-md-1.col-lg-1
+    .col-xs-12.col-sm-12.col-md-1.col-lg-1.fixed-change-post-btn
+      .btn.btn-default.btn-dark
+        .fa.fa-angle-left
+        .glyphicon.glyphicon-menu-left
+      .btn.btn-default.btn-dark
+        .fa.fa-angle-right
 = render 'index'

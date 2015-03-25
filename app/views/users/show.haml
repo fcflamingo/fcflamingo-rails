@@ -1,0 +1,29 @@
+.well
+  .row{style: 'padding-top: 16px;'}
+    .col-xs-12.col-sm-12.col-md-9.col-lg-9
+      %ul
+        %li
+          %h1
+            = gravatar_for @user
+            = link_to user_path(@user) do
+              = @user.name
+        %li
+          %asside
+            = @user.email
+        %li
+          Admin:
+          = @user.admin
+        %li
+          Author:
+          = @user.author
+        %li
+          Client:
+          = @user.client
+        %br
+        %li.btn-group
+          = link_to edit_user_path(@user), title: 'edit', class: 'btn btn-primary' do
+            %span.glyphicon.glyphicon-wrench
+          = link_to user_path(@user), :method => :delete, title: 'destroy', :data => { :confirm => 'Are you sure?' }, class: 'btn btn-danger' do
+            %span.glyphicon.glyphicon-remove-sign
+
+= render 'index'
