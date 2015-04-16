@@ -24,6 +24,7 @@
 @import "contact";
 @import "debug";
 
+$pink: #f0a;
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -80,8 +81,8 @@ img.gravatar {
 
 a:hover, .fa:hover, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-brand:hover {
   transition: .15s ease;
-  color: #f0a;
-  text-decoration: underline;
+  color: $pink;
+  text-decoration: none;
 }
 
 .buffer-vertical {

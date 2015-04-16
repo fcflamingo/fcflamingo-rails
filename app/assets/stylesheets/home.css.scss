@@ -1,3 +1,5 @@
+$pink: #f0a;
+
 .tagline {
   text-align: center;
   padding-top: 4em;
@@ -34,14 +36,23 @@
   width: 100%;
   ul {
     text-align: text-center;
-    width: 120px;
+    width: 150px;
     margin: 0 auto;
   }
   li {
     float: left;
     padding: 0.5em 1em;
-    a {
+    .fa {
+      font-size: 2em;
       color: #fff;
+      -webkit-transition: ease .5s;
+      -moz-transition: ease .5s;
+      -ms-transition: ease .5s;
+      -o-transition: ease .5s;
+      transition: ease .5s;
+      &:hover {
+        color: $pink;
+      }
     }
   }
 }
