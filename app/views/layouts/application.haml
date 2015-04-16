@@ -9,7 +9,14 @@
     = favicon_link_tag 'favicon.png'
     %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700", :rel => "stylesheet", :type => "text/css"}/
   %body
-    = render 'common/nav'
+
+    - if controller?("home") && action?("home")
+      %header#homeNav
+        = render 'common/nav'
+    - else
+      %header
+        = render 'common/nav'
+
     .container-fluid.buffer-vertical
       - flash.each do |message_type, message|
         %div{:class => "alert alert-#{message_type}"}= message

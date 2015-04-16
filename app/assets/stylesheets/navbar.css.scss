@@ -1,15 +1,30 @@
+#homeNav {
+  .navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
+    color: #fff;
+  }
+}
+
 .navbar {
   margin:0;
   letter-spacing: 2px;
 }
 
-.navbar.navbar-default {
+.navbar.navbar-default, .navbar-default .navbar-toggle {
   background-color: transparent;
   border:transparent;
+  &:active, &:hover, &:focus {
+    background-color: transparent;
+    border:transparent;
+  }
 }
 
 .navbar-toggle {
   margin-top: 28px;
+  border: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
 }
 
 .navbar-default .navbar-brand {
@@ -43,9 +58,6 @@
   .navbar-default .navbar-brand {
     font-size: 40px;
     margin-top: 20px;
-  }
-  .navbar-nav li.social {
-    padding: 0.5em 1em;
   }
 }
 

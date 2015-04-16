@@ -2,33 +2,58 @@
   text-align: center;
   padding-top: 4em;
   font-size: 20px;
-  color: #111;
+  color: #fff;
+  -webkit-transition: ease .5s;
+  -moz-transition: ease .5s;
+  -ms-transition: ease .5s;
+  -o-transition: ease .5s;
+  transition: ease .5s;
 }
-
-// todo add when content is ready
-//#home-image {
-//  display: none;
-//}
-//#home-video {
-//  display: inline;
-//}
-//#home-video {
-//  position: fixed;
-//  top: 0;
-//  right: 0;
-//  width: auto;
-//  height: auto;
-//  min-width: 100%;
-//  min-height: 100%;
-//  z-index: -100;
-//  background-size: cover;
-//  overflow: hidden;
-//}
-//@media (min-width: 0px) and (max-width: 991px) {
-//  #home-video {
-//    display: none;
-//  }
-//  #home-image {
-//    display: inline;
-//  }
-//}
+#home-image {
+  display: none;
+}
+#home-video {
+  display: inline;
+}
+#home-video, #home-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
+#social {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  ul {
+    text-align: text-center;
+    width: 120px;
+    margin: 0 auto;
+  }
+  li {
+    float: left;
+    padding: 0.5em 1em;
+    a {
+      color: #fff;
+    }
+  }
+}
+@media (min-width: 0px) and (max-width: 991px) {
+  .tagline {
+    padding-top: 0;
+  }
+  #home-video {
+    display: none;
+  }
+  #home-background {
+    background: url('mobile_background.jpeg')center top no-repeat;
+    background-size: cover;
+  }
+}

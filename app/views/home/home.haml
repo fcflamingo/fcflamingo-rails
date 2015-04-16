@@ -1,7 +1,20 @@
 %p.tagline
   A DIGITAL DEVELOPMENT AND INNOVATION GROUP BASED IN SANTA MONICA AND NEW YORK CITY.
 
-// todo add when content is ready
--#= video_tag('background.mp4', :autoplay => "", :id => "home-video", :loop => "", :preload => "auto", :controls => true)
+%video#home-video{:autoplay => "", :loop => "", :poster => "polina.jpg"}
+  %source{:src => "https://s3.amazonaws.com/fcflamingo-rails/Clean.webmhd.webm", :type => "video/webm"}
+  %source{:src => "https://s3.amazonaws.com/fcflamingo-rails/Clean.mp4", :type => "video/mp4"}
 
-= image_tag 'http://static1.squarespace.com/static/547e761ee4b06bdd71a72c1a/54f642bde4b08809202a489c/54f642d9e4b0a47e92ebd6d3/1425425115554/10821874_10205280601717335_1572737456_o.jpg?format=1000w', id: 'home-image'
+#home-background
+
+#social
+  %ul
+    %li.social
+      = link_to "https://www.facebook.com/flamingolabs", target: "_blank" do
+        %i.fa.fa-facebook
+    %li.social
+      = link_to "https://instagram.com/fcflamingo", target: "_blank" do
+        %i.fa.fa-instagram
+    %li.social
+      = link_to "https://twitter.com/fcflamingo", target: "_blank" do
+        %i.fa.fa-twitter
