@@ -25,6 +25,10 @@
 @import "debug";
 
 $pink: #f0a;
+.no-padding {
+  padding: 0 !important;
+}
+
 
 body {
   font-family: 'Josefin Sans', sans-serif;
