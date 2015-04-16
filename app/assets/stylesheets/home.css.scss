@@ -1,3 +1,5 @@
+$pink: #f0a;
+
 .tagline {
   text-align: center;
   padding-top: 4em;
@@ -34,14 +36,32 @@
   width: 100%;
   ul {
     text-align: text-center;
-    width: 120px;
+    width: 150px;
     margin: 0 auto;
   }
   li {
     float: left;
     padding: 0.5em 1em;
-    a {
+    .fa {
+      font-size: 2em;
       color: #fff;
+      -webkit-transition: ease .5s;
+      -moz-transition: ease .5s;
+      -ms-transition: ease .5s;
+      -o-transition: ease .5s;
+      transition: ease .5s;
+      &:hover {
+        -webkit-box-shadow:0 0 15px $pink;
+        box-shadow:0 0 15px $pink;
+        bottom:0px;
+        left:10%;
+        right:10%;
+        width: 100%;
+        height:50%;
+        -moz-border-radius:100%;
+        border-radius:100%;
+        background: rgba(255, 0, 170, 0.69);
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 !!!
 %html
   %head
+    = render 'layouts/flamingo_sig'
     %title
       FLAMINGO
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
@@ -8,6 +9,7 @@
     = csrf_meta_tags
     = favicon_link_tag 'favicon.png'
     %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700", :rel => "stylesheet", :type => "text/css"}/
+    %meta{:content => 'initial-scale=1', :name => 'viewport'}
   %body
 
     - if controller?("home") && action?("home")
