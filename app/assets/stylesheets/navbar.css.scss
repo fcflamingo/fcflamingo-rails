@@ -2,6 +2,13 @@
   .navbar-default .navbar-brand, .navbar-default .navbar-nav li a {
     color: #fff;
   }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #111;
 }
 
 .navbar {
@@ -21,10 +28,6 @@
 .navbar-toggle {
   margin-top: 28px;
   border: none;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
 }
 
 .navbar-default .navbar-brand {
