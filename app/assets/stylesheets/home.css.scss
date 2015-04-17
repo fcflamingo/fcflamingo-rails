@@ -29,14 +29,13 @@ $pink: #f0a;
   background-size: cover;
   overflow: hidden;
 }
-#social {
+
+#social, #navSocial {
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  width: 175;
   ul {
     text-align: text-center;
-    width: 150px;
+    width: 175px;
     margin: 0 auto;
   }
   li {
@@ -44,7 +43,6 @@ $pink: #f0a;
     padding: 0.5em 1em;
     .fa {
       font-size: 2em;
-      color: #fff;
       -webkit-transition: ease .5s;
       -moz-transition: ease .5s;
       -ms-transition: ease .5s;
@@ -63,6 +61,22 @@ $pink: #f0a;
         background: rgba(255, 0, 170, 0.69);
       }
     }
+  }
+}
+
+#navSocial {
+  right: 0;
+  top: 2em;
+  .fa {
+    color: #111;
+  }
+}
+
+#social {
+  left: 0;
+  bottom: 0;
+  .fa {
+    color: #fff;
   }
 }
 @media (min-width: 0px) and (max-width: 991px) {
