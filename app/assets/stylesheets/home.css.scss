@@ -31,7 +31,6 @@ $pink: #f0a;
 }
 
 #social, #navSocial {
-  position: fixed;
   width: 175;
   ul {
     text-align: text-center;
@@ -67,6 +66,7 @@ $pink: #f0a;
 #navSocial {
   right: 0;
   top: 2em;
+  position: absolute;
   .fa {
     color: #111;
   }
@@ -75,6 +75,7 @@ $pink: #f0a;
 #social {
   left: 0;
   bottom: 0;
+  position: fixed;
   .fa {
     color: #fff;
   }
