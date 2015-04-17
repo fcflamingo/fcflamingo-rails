@@ -5,7 +5,7 @@
 .row
   .col-xs-12.col-sm-12.col-md-12.col-lg-12.bg-white{style: 'padding-top: 16px;'}
     - @plays.reverse_each do |play|
-      %ul.col-xs-12.col-sm-12.col-md-6.col-lg-4.play-time
+      %ul.col-xs-12.col-sm-6.col-md-4.col-lg-4.play-time
         %li
           = link_to play_path(play), class: 'col-xs-12 play-title' do
             %h2
@@ -13,4 +13,4 @@
           - unless play.banner.empty?
             = image_tag "#{play.banner}"
           - else
-            %iframe{:src => "#{play.image_1}",  height: "250px;", width: "100%"}
+            %iframe{:src => "#{play.image_1}"}
