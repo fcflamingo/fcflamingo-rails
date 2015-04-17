@@ -1,5 +1,7 @@
-.play-time, .work-time {
-  .play-title, .work-title {
+.play-time {
+  height: 360px;
+  margin:0;
+  .play-title{
     -webkit-transition: .25s ease;
     -moz-transition: .25s ease;
     -ms-transition: .25s ease;
@@ -12,7 +14,8 @@
     width: 100%;
     height: 100%;
     text-decoration: none;
-    border: 1em solid #fff;
+    z-index: 1000;
+    padding: 1em;
     h2 {
       position: relative;
       top: 35%;
@@ -20,14 +23,16 @@
       color: #fff;
     }
   }
-  img {
+  img, iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
   }
-  overflow: hidden;
 }
 
-.play-title:hover, .work-title:hover {
-  border-bottom: 0 solid #fff;
-  border-top: 0 solid #fff;
+.play-title:hover {
   opacity: 1;
   -webkit-transition: .5s ease;
   -moz-transition: .5s ease;
@@ -42,6 +47,7 @@
   background: -ms-linear-gradient(bottom,  rgba(24, 66, 184,0.95) 0%, rgba(137, 0, 91, 0.95) 100%); /* IE10+ */
   background: linear-gradient(to top,  rgba(24, 66, 184,0.95) 0%, rgba(137, 0, 91, 0.95) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb83fa', endColorstr='#e93cec',GradientType=1 ); /* IE6-9 */
+  overflow: hidden;
 }
 
 .fixed-side-nav {
@@ -80,9 +86,11 @@
   border: 1em solid #fff;
 }
 
-@media (min-width: 0px) and (max-width: 991px) {
+
+@media (min-width: 769px) and (max-width: 991px) {
   .play-time, .work-time {
-    max-height: 100%;
+    height: 300px;
+    overflow: hidden;
   }
   .fixed-side-nav, .fixed-change-post-btn {
     position: initial;
@@ -95,5 +103,13 @@
     margin: 0 auto;
     width: 50% !important;
     float: left;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 5000px) {
+  .play-time {
+    height: 267px;
+    overflow: hidden;
+    margin: 0;
   }
 }
